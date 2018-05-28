@@ -1,0 +1,134 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_mixins.scss';
+
+@import 'base/_typography.scss';
+@import 'base/_reset.scss';
+
+@import 'helpers/_common.scss';
+
+@import 'layout/_header.scss';
+@import 'layout/_intro_block.scss';
+@import 'layout/_about_block.scss';
+@import 'layout/_services_block.scss';
+@import 'layout/_works_block.scss';
+@import 'layout/_team_block.scss';
+@import 'layout/_map_block.scss';
+@import 'layout/_footer.scss';
+
+@media all and (min-width: 200px) and (max-width: 1024px){
+  body{
+    width: 100% !important;
+  }
+  .container{
+    max-width: 100%;
+  }
+  .nav{
+    &__listItem{
+      &_link{
+        font-size: 18px !important;
+      }
+    }
+  }
+  .intro{
+    &_firstP{
+      font-size: 32px !important;
+    }
+    &_secondP{
+      font-size: 16px !important;
+      width: 80% !important;
+    }
+  }
+  .teamSlider{
+    &__slide{
+      &_communication{
+        padding: 20px 10px !important;
+      }
+    }
+  }
+  .map{
+    .container{
+      margin-left: -50% !important;
+    }
+    .map__form{
+      width: 80% !important;
+      flex-flow: column !important;
+      margin: 0 auto !important;
+      &_input{
+        margin-top: 0 !important;
+        &:first-child{
+          margin-top: 30px !important;
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
+
+  .about{
+    padding: 20px 0 0 0 !important;
+    .container{
+      flex-flow: column !important;
+    }
+    &__titleBlock{
+      height: 100px !important;
+    }
+    &__info{
+      padding-top: 0 !important;
+      &_text{
+        padding: 0 10px !important;
+        font-size: 16px !important;
+      }
+      &_button{
+        margin: 20px auto 20px !important;
+      }
+    }
+  }
+  .services{
+    &__title{
+      display: none !important;
+    }
+    &__blocks{
+      width: 100% !important;
+      order: 2 !important;
+      &_otdel{
+        flex: 0 1 380px !important;
+        margin: 0 auto !important;
+      }
+      &_otdel:nth-child(2n+1){
+        background: #dbdbdb !important;
+      }
+      .mob{
+        background: $bg !important;
+      }
+    }
+  }
+}
+@media all and (min-width: 200px) and (max-width: 1023px) {
+  footer {
+    .container {
+      display: block !important;
+      text-align: center !important;
+    }
+  }
+}
+
+@media all and (max-width: 699px){
+  .services{
+    &__title{
+      display: none !important;
+    }
+    &__blocks{
+      width: 100% !important;
+      order: 2 !important;
+      &_otdel{
+        flex: 0 1 100% !important;
+        margin: 0 auto !important;
+      }
+      &_otdel:nth-child(2n+1){
+        background: #dbdbdb !important;
+      }
+      .mob{
+        background: $bg !important;
+      }
+    }
+  }
+}
